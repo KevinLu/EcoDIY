@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="tags.css">
-</head>
-<h1>I have </h1>
-    <p>
-        <div class="tags-input" data-name="tags-input">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Waste Less, Design More.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div.container1  {
+            float: left;
+            margin-top: 150px;
+            margin-left: 500px;
+            }
+            div.container2  {
+            background-color:#c9af98;
+            float:right; 
+            margin-right: 100px;
+            height: 700px;
+            min-width: 400px;
+            margin: 0 auto;
+            }
+            input[type=text], select {
+            width: 100%;
+            padding: 12px 6px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        </style>
+        <link rel="stylesheet" href="tags.css">
+    </head>
+    <body>
+        <div class="container1">
+        <h1>Waste Less, Design More.</h1>
+        <h3>Start searching for DIY projects now <a style="color:#c9af98;">▶</a></h3>
         </div>
-        <script src="tags.js"></script>
-    </p>
-    <h1>
-</h1>
-<button type="button"><h2>Find me projects!</h2></button>
+        <div class="container2">
+            <img src="Symbol.png" alt="Trulli" width="200" height="220" align="middle">
+            <p>
+                <div class="tags-input" data-name="tags-input" placeholder="Add a material...">
+                </div>
+            <script src="tags.js"></script> 
+                <button type="button">Add a material...</button>
+            </p>
+        </div>
+    </body>
+</html>

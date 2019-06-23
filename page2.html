@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Waste Less, Design More.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div.container1  {
+            float: left;
+            margin-left: 200px;
+            }
+            div.container2  {
+            background-color:#c9af98;
+            float:right; 
+            margin-right: 100px;
+            height: 700px;
+            min-width: 400px;
+            margin: 0 auto;
+            }
+            input[type=text], select {
+            width: 100%;
+            padding: 12px 6px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+          .container {
+            position: relative;
+            width: 50%;
+          }
+
+          .image {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            //background-color: orange;
+          }
+
+          .container:hover .overlay {
+            opacity: 1;
+          }
+
+          .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        </style>
+        <link rel="stylesheet" href="tags.css">
+    </head>
+    <body>
+        <div class="container1">
+            <a class="container">
+                <img src="page2images/img1.png" alt="img1.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">3-TIER WOODEN OFFICE DESK ORGANIZER</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img2.png" alt="img2.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">WOODEN BOAT SWING SET</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img3.png" alt="img3.png" width="256" height="225" align="middle"><br>
+                <div class="overlay">
+                    <div class="text">SMALL OAK TABLE</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img4.png" alt="img4.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">WOODEN FLOATING SHELVES</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img5.png" alt="img5.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">WOOD PALLET WINE RACK</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img6.png" alt="img6.png" width="256" height="225" align="middle"><br>
+                <div class="overlay">
+                    <div class="text">WOODEN SOFA SLEEVE WITH CUP HOLDER</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img7.png" alt="img7.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">WOODEN BOTTLE CARRIER</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img8.png" alt="img8.png" width="256" height="225" align="middle">
+                <div class="overlay">
+                    <div class="text">WOODEN DOORMAT</div>
+                </div>
+            </a>
+            <a class="container">
+                <img src="page2images/img9.png" alt="img9.png" width="256" height="225" align="middle"><br>
+                <div class="overlay">
+                    <div class="text">WOODEN PAINTING</div>
+                </div>
+            </a>
+        </div>
+        <div class="container2">
+            <p style="background-color:orange">400 Results</p>
+            <img src="Symbol.png" alt="Trulli" width="200" height="220" align="middle">
+            <p>
+                <div class="tags-input" data-name="tags-input">
+                </div>
+            <script src="tags.js"></script> 
+                <button type="button">Add a material...</button>
+            </p>
+        </div>
+    </body>
+</html>
