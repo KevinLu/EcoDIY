@@ -2,7 +2,7 @@
     let hiddenInput = document.createElement('input'),
         mainInput = document.createElement('input'),
         tags = [];
-    
+
     hiddenInput.setAttribute('type', 'hidden');
     hiddenInput.setAttribute('name', el.getAttribute('data-name'));
 
@@ -30,7 +30,7 @@
     el.appendChild(mainInput);
     el.appendChild(hiddenInput);
 
-    function addTag (text) {
+    function addTag(text) {
         let tag = {
             text: text,
             element: document.createElement('span'),
@@ -53,14 +53,14 @@
         refreshTags();
     }
 
-    function removeTag (index) {
+    function removeTag(index) {
         let tag = tags[index];
         tags.splice(index, 1);
         el.removeChild(tag.element);
         refreshTags();
     }
 
-    function refreshTags () {
+    function refreshTags() {
         let tagsList = [];
         tags.forEach(function (t) {
             tagsList.push(t.text);
@@ -68,7 +68,37 @@
         hiddenInput.value = tagsList.join(',');
     }
 
-    function filterTag (tag) {
+    function filterTag(tag) {
         return tag.replace(/[^\w -]/g, '').trim().replace(/\W+/g, '-');
+    }
+
+    document.getElementById('submit').onclick = function () {
+        var list = tags.map(function (item) {
+            return item['text'];
+        });
+        console.log(list);
+        var indexs = [];
+
+        $.getJSON('https://api.myjson.com/bins/iwkml', function (data) {
+            for (var j = 0; j < data.length; j++) {
+                var matches = 0;
+                for (var k = 0; k < data[j].materials.length; k++) {
+                    for (var i = 0; i < list.length; i++) {
+                        if (list[i].toUpperCase() === data[j].materials[k].toUpperCase()) {
+                            matches++;
+                        }
+                    }
+                }
+                console.log(matches / data[j].materials.length);
+                if (matches / data[j].materials.length >= 0.3) {
+                    indexs.push(j);
+                }
+            }
+        });
+        console.log(indexs);
+        localStorage.setItem("projectIndex", JSON.stringify(indexs));
+        setTimeout(function () {
+            window.location.href = 'page2.html';
+        }, 1000);
     }
 });
