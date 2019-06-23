@@ -1,1 +1,3 @@
-# TOHacks2019
+# EcoDIY
+
+https://devpost.com/software/ecodiy
